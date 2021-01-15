@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Card from "./Components/Card.vue";
-import CardStack from "./Components/CardStack.vue";
+import Card from "@/Components/Card.vue";
+import CardStack from "@/Components/CardStack.vue";
 
 export default {
   components: { Card, CardStack },

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import AddCard from '@/views/AddCard.vue'
 
-VueRouter.ude(VueRouter)
+Vue.use(VueRouter)
 
 const routes = [
     {
@@ -15,3 +15,10 @@ const routes = [
         component: AddCard
     }
 ]
+const router = new VueRouter({
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes,
+});
+
+export default router;
