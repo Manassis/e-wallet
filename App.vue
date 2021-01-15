@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Card :card="myCard" />
-    <router-link to="/views/AddCard">ADD CARD</router-link>
     <router-link to="/views/Home"> ADD A NEW CARD</router-link>
+    <router-link to="/views/AddCard">ADD CARD</router-link>
     <router-view />
   </div>
 </template>
