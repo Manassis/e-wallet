@@ -1,26 +1,36 @@
 <template>
   <div id="app">
-    <Card :card="myCard" />
-    <router-link to="/views/Home"> ADD A NEW CARD</router-link>
-    <router-link to="/views/AddCard">ADD CARD</router-link>
-    <router-view />
+    <router-view :data="data" />
   </div>
 </template>
 
 <script>
-import Card from "./Components/Card.vue";
+/*
 
-export default {
-  components: { Card },
-  data() {
-    return {
-      background: "white",
-      myCard: {
+
+myCard: {
         expyear: "12",
         expmonth: "5",
         cardholder: "Yngwie Malmsteen",
         vendor: "bitcoin",
-        cardnumber: "1234567890123",
+        cardnumber: "1234 5678 9012 3456",
+      },
+
+*/
+
+export default {
+  data() {
+    return {
+      background: "white",
+      data: {
+        cards: [],
+        setCards: (cards) => {
+          this.data.cards = cards;
+        },
+        selectedCard: null,
+        setSelectedCard: (card) => {
+          this.data.selectedCard = card;
+        },
       },
     };
   },
@@ -28,14 +38,20 @@ export default {
 </script>
 <style lang="scss">
 .foo {
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   min-width: 20rem;
   min-height: 20rem;
 }
-.evil {
-  background-color: white;
-}
 .bitcoin {
-  background-color: red;
+  background-color: rgb(242, 206, 63);
+}
+.evil {
+  background-color: rgb(242, 63, 63);
+}
+.ninja {
+  background-color: rgb(8, 8, 8);
+}
+.blockchain {
+  background-color: rgb(75, 58, 184);
 }
 </style>
